@@ -1,40 +1,39 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Asegúrate de tener Bootstrap importado
+import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure Bootstrap is imported
+import { useUserContext } from '../../../context/context';
 
 const Profile: React.FC = () => {
-  // Datos de ejemplo, puedes reemplazarlos con datos reales si los tienes en el estado o en props
+  // Extract setRole from UserContext
+  const { role, setRole } = useUserContext(); 
   const [user, setUser] = useState({
     name: 'Juan Pérez',
     age: 28,
     email: 'juan.perez@example.com',
-    role: 'Estudiante' // Rol por defecto
+    role: 'Estudiante' // Default role
   });
 
-  // Extraer las iniciales del nombre
+  // Extract initials from the name
   const getInitials = (name: string) => {
     const names = name.split(' ');
     return names.map(n => n[0]).join('');
   };
 
-  // Función de cierre de sesión, puede ser reemplazada con la lógica real
+  // Handle logout
   const handleLogout = () => {
-    // Aquí iría la lógica para cerrar sesión
+    // Add your logout logic here
     console.log('Cerrar sesión');
   };
 
-  // Función para eliminar la cuenta, puede ser reemplazada con la lógica real
+  // Handle account deletion
   const handleDeleteAccount = () => {
-    // Aquí iría la lógica para eliminar la cuenta
+    // Add your account deletion logic here
     console.log('Eliminar cuenta');
   };
 
-  // Función para convertir el rol a Instructor
+  // Convert role to Instructor
   const handleBecomeInstructor = () => {
-    setUser(prevState => ({
-      ...prevState,
-      role: 'Instructor'
-    }));
+    setRole('Instructor'); // Use setRole to update the role in context
   };
 
   return (
@@ -45,7 +44,7 @@ const Profile: React.FC = () => {
             <Card.Header as="h2">Perfil de Usuario</Card.Header>
             <Card.Body>
               <div className="d-flex flex-column align-items-center mb-3">
-                {/* Foto de perfil */}
+                {/* Profile picture */}
                 <div
                   className="rounded-circle d-flex justify-content-center align-items-center"
                   style={{
@@ -68,9 +67,9 @@ const Profile: React.FC = () => {
                 <strong>Correo:</strong> {user.email}
               </Card.Text>
               <Card.Text>
-                <strong>Rol:</strong> {user.role}
+                <strong>Rol:</strong> {role} {/* Use the role from context */}
               </Card.Text>
-              {user.role === 'Estudiante' && (
+              {role === 'Student' && (
                 <Button variant="primary" onClick={handleBecomeInstructor}>
                   Convertirse en Instructor
                 </Button>

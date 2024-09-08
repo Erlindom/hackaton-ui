@@ -12,28 +12,31 @@ import Register from './components/auth/Register';
 import MainLayout from './MainLayout';
 import Certificate from './components/certificate/certificate';
 import Wallet from './components/auth/Wallet';
+import { UserProvider } from './context/context';
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Rutas de autenticación */}
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+      <UserProvider>
+        <Routes>
+          {/* Rutas de autenticación */}
+          <Route path="/wallet" element={<Wallet />} />
+            <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-        {/* Rutas protegidas con layout */}
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Courses />} />
-          <Route path='/courses' element={<Courses />} />
-          <Route path='/my-courses' element={<MyCourses />} />
-          <Route path='/learning-progress' element={<LearningProgress />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/create-course' element={<CreateCourse />} />
-          <Route path="/course/detail" element={<CourseDetail />} />
-          <Route path="/certificate" element={<Certificate />} />
-        </Route>
-      </Routes>
+          {/* Rutas protegidas con layout */}
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Courses />} />
+            <Route path='/courses' element={<Courses />} />
+            <Route path='/my-courses' element={<MyCourses />} />
+            <Route path='/learning-progress' element={<LearningProgress />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/create-course' element={<CreateCourse />} />
+            <Route path="/course/detail" element={<CourseDetail />} />
+            <Route path="/certificate" element={<Certificate />} />
+          </Route>
+        </Routes>
+      </UserProvider>
     </BrowserRouter>
   );
 }

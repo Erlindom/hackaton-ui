@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useUserContext } from '../../context/context';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const { setRole } = useUserContext();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica del login, como hacer una petición a tu API
+    // Aquí puedes manejar la lógica del login, como hacer una petición a tu API  
     console.log('Login', { email, password });
   };
 
@@ -46,6 +49,20 @@ const Login: React.FC = () => {
               </button>
             </div>
           </form>
+          <div className="mt-3">
+            <button
+              className="btn btn-secondary me-2"
+              onClick={() => setRole('Student')}
+            >
+              Login as Student
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => setRole('Instructor')}
+            >
+              Login as Instructor
+            </button>
+          </div>
         </div>
       </div>
     </div>
