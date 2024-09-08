@@ -1,0 +1,45 @@
+.sidebar .nav {
+  padding: 0px !important;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ededed;
+}
+
+.search {
+  outline: none;
+}
+
+.bg-gray {
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+.course-row {
+  width: 260px;
+}
+
+.sticky-dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: '100%';
+  width: 245px;
+  background-color: '#f8f9fa';
+  overflow-y: auto;
+  border-right: 1px solid #dee2e6;
+  z-index: 2;
+}
+
+.course-content {
+  background-color: #fcfbf9;
+  margin-left: 245px;
+  width: calc(100% - 200px);
+  padding: 20px;
+  overflow-y: 'auto';
+}
+
+

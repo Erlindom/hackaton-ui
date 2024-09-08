@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Master en programación avanzada",
+    "description": "Aprende técnicas avanzadas de programación en diversos lenguajes y frameworks.",
+    "author": "Luis Mariño",
+    "price": "$25,000",
+    "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+    "link": "#"
+  },
+  {
+    "id": 2,
+    "title": "Fundamentos de desarrollo web",
+    "description": "Domina las bases del desarrollo web con HTML, CSS y JavaScript.",
+    "author": "Ana López",
+    "price": "$18,000",
+    "image": "https://www.mooc.org/hubfs/what-computer-programming-jobs-offer-remote-work-jpg.jpeg",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "Introducción a la inteligencia artificial",
+    "description": "Explora los fundamentos de la IA y aprende a desarrollar modelos de machine learning.",
+    "author": "Carlos Pérez",
+    "price": "$30,000",
+    "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Master en desarrollo móvil",
+    "description": "Crea aplicaciones móviles profesionales con Android e iOS.",
+    "author": "María García",
+    "price": "$28,000",
+    "image": "https://www.mooc.org/hubfs/what-computer-programming-jobs-offer-remote-work-jpg.jpeg",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Big Data y análisis de datos",
+    "description": "Aprende a manejar grandes volúmenes de datos y aplicarlos en decisiones empresariales.",
+    "author": "Juan Torres",
+    "price": "$35,000",
+    "image": "https://cs.ucsb.edu/sites/default/files/2021-06/source-4280758_1920.jpg",
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": "Diseño UX/UI para aplicaciones web",
+    "description": "Desarrolla interfaces de usuario intuitivas y efectivas.",
+    "author": "Laura Martínez",
+    "price": "$22,000",
+    "image": "https://www.mooc.org/hubfs/what-computer-programming-jobs-offer-remote-work-jpg.jpeg",
+    "link": "#"
+  }
+]
