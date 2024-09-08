@@ -37,11 +37,11 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container>
       <Row className="justify-content-center">
         <Col md={6}>
           <Card className="text-center">
-            <Card.Header as="h2">Perfil de Usuario</Card.Header>
+            <Card.Header as="h2">My profile</Card.Header>
             <Card.Body>
               <div className="d-flex flex-column align-items-center mb-3">
                 {/* Profile picture */}
@@ -50,7 +50,7 @@ const Profile: React.FC = () => {
                   style={{
                     width: '100px',
                     height: '100px',
-                    backgroundColor: '#e57373',
+                    backgroundColor: '#1e2343',
                     color: '#fff',
                     fontSize: '36px',
                     fontWeight: 'bold'
@@ -61,26 +61,26 @@ const Profile: React.FC = () => {
                 <Card.Title className="mt-3">{user.name}</Card.Title>
               </div>
               <Card.Text>
-                <strong>Edad:</strong> {user.age} años
+                <strong>Age:</strong> {user.age} años
               </Card.Text>
               <Card.Text>
-                <strong>Correo:</strong> {user.email}
+                <strong>Email:</strong> {user.email}
               </Card.Text>
               <Card.Text>
                 <strong>Rol:</strong> {role} {/* Use the role from context */}
               </Card.Text>
               {role === 'Student' && (
-                <Button variant="primary" onClick={handleBecomeInstructor}>
+                <Button className='btn-blue border-0' onClick={handleBecomeInstructor}>
                   Convertirse en Instructor
                 </Button>
               )}
             </Card.Body>
             <Card.Footer>
               <Button variant="secondary" className="me-2" onClick={handleLogout}>
-                Cerrar sesión
+                Log out
               </Button>
               <Button variant="danger" onClick={handleDeleteAccount}>
-                Eliminar cuenta
+                Delete account
               </Button>
             </Card.Footer>
           </Card>

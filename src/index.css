@@ -5,7 +5,7 @@
 }
 
 .sidebar ul li a:hover {
-  background-color: #ededed;
+  background-color: #1e2343;
 }
 
 .search {
@@ -35,6 +35,10 @@
 }
 
 .course-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
   background-color: #fcfbf9;
   margin-left: 245px;
   width: calc(100% - 200px);
@@ -42,4 +46,24 @@
   overflow-y: 'auto';
 }
 
+.bg-sidebar {
+  background-color: #00001d;
+}
 
+.btn-blue {
+  background-color: #1e2343;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background-color: #00001d;
+  color: #fff;
+}
+
+.search-content {
+  width: 100%;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #1e2343;
+}

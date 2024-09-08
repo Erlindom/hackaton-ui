@@ -59,7 +59,7 @@ const Courses: React.FC = () => {
                   <p style={{ fontSize: 14 }}> <span className='fw-bold'> By </span> {course.author}</p>
                   <p>{course.price}</p>
                   <button 
-                    className="btn btn-primary mt-auto"
+                    className="btn btn-blue mt-auto"
                     onClick={() => navigate(`/course/detail`)} // Navega a la ruta estática sin id
                   >
                     Go somewhere
